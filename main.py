@@ -40,10 +40,9 @@ quantity = input("How many of these minions are you using?: ")
 
 actionTime = chosen["actionTimes"][(tier-1)//2]
 unitPrice = chosen["unitPrice"]
-
-print(chosen)
-print(f'The action time for {minion} is {actionTime} seconds ' +
-      f'and its unit price is {unitPrice} coins.')
+numItems = chosen["itemsPer"]
+hourlyEarnings = 86400/actionTime * unitPrice * numItems
+print(f'Each minion makes {} coins each hour => all {quantity} minions make {} each hour.')
 
 # value = input("Please enter a bopbop:\n")
 # print(value)
